@@ -1,8 +1,8 @@
 const MyAccount = () => {
     return (
-    <div>
-        
-    </div>
+    <>
+        My Account
+    </>
     )
 }
 

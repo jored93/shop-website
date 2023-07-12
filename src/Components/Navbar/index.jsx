@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom"
+import PropTypes from 'prop-types'
 
 const NavBar = () => {
+    NavBar.propTypes = {
+        to: PropTypes.node.isRequired,
+        children: PropTypes.node.isRequired,
+        activeStyle: PropTypes.node.isRequired,
+    }
+
     const activeStyle = 'underline underline-offset-4'
     const NavItem = ({ to, children, activeStyle }) => {
         return (
@@ -14,7 +21,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className='flex justify-between items-center z-10 w-full py-5 px-8 text-sm font-light'>
+        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
             <ul className='flex items-center gap-3'>
                 <li className='font-semibold text-lg'>
                     <NavItem to="/" activeStyle={activeStyle}>

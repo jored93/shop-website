@@ -1,8 +1,8 @@
 const MyOrders = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      My Orders
+    </>
   )
 }
 
