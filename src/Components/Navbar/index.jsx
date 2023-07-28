@@ -1,3 +1,4 @@
+import { BsCartPlus } from 'react-icons/bs' 
 import { NavLink } from "react-router-dom"
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
@@ -24,7 +25,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
+        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-emerald-300'>
             <ul className='flex items-center gap-3'>
                 <li className='font-semibold text-lg'>
                     <NavItem to="/" activeStyle={activeStyle}>
@@ -82,8 +83,9 @@ const NavBar = () => {
                         Signin
                     </NavItem>
                 </li>
-                <li>
-                    cart {context.count}
+                <li className='flex items-center'>
+                    <BsCartPlus />
+                    <div className='bg-white rounded'>{context.count}</div>
                 </li>
             </ul>
         </nav>

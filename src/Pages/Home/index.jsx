@@ -1,6 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Card from "../../Components/Card"
+import ProductDetail  from '../../Components/ProductDetail'
+import { ShoppingCartContext } from '../../Context'
+
 const Home = () => {
+  const context = useContext(ShoppingCartContext)
   const [items, setItems] = useState(null)
 
   useEffect(() => {
@@ -9,6 +13,7 @@ const Home = () => {
       .then(data => setItems(data))
   }, [])
   return (
+    <>
     <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg'>
       {
         items?.map( item => (
@@ -19,6 +24,8 @@ const Home = () => {
         ))
       }
     </div>
+    {context.productDetailVisible && <ProductDetail />}
+    </>
   )
 }
 
