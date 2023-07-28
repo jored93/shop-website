@@ -5,8 +5,6 @@ import { ShoppingCartContext } from '../../Context';
 
 const ProductDetail = () => {
   const context = useContext(ShoppingCartContext)
-  console.log(context.productToShow);
-  
   return (
     <aside className='product-detail flex flex-col fixed right-0 border bg-white border-black rounded-lg'>
         <div className='flex justify-between items-center p-6'>
