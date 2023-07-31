@@ -1,4 +1,4 @@
-import { BsCartPlus } from 'react-icons/bs' 
+import { BsCartPlus } from 'react-icons/bs'
 import { NavLink } from "react-router-dom"
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
@@ -49,7 +49,7 @@ const NavBar = () => {
                 </li>
                 <li>
                     <NavItem to="/furnitures" activeStyle={activeStyle}>
-                    Furnitures
+                        Furnitures
                     </NavItem>
                 </li>
                 <li>
